@@ -52,20 +52,17 @@ export default function Register() {
         <section>
           <img src={logoImg} alt='Be The Hero' />
 
-          <h1>Cadastro</h1>
-          <p>
-            Faça seu cadastro e ajude pessoas a encontrarem os casos da sua ONG.
-            🦸‍♂️
-          </p>
+          <h1>Register</h1>
+          <p>Register and help people find the cases of your NGO. 🦸‍♂️</p>
 
           <Link className='back-link' to='/'>
             <FiArrowLeft size={16} color='#E02041' />
-            Voltar para o logon
+            Back to login
           </Link>
         </section>
         <form onSubmit={handleRegister}>
           <input
-            placeholder='Nome da ONG'
+            placeholder='NGO Name'
             value={name}
             onChange={e => setName(e.target.value)}
           />
@@ -78,20 +75,20 @@ export default function Register() {
           />
 
           <input
-            placeholder='Whatsapp'
+            placeholder='Phone number'
             value={whatsapp}
             onChange={e => setWhatsapp(e.target.value)}
           />
 
           <div className='input-group'>
             <input
-              placeholder='Cidade'
+              placeholder='City'
               value={city}
               onChange={e => setCity(e.target.value)}
             />
 
             <input
-              placeholder='UF'
+              placeholder='ST'
               style={{ width: 80 }}
               value={uf}
               onChange={e => setUf(e.target.value)}
@@ -99,8 +96,7 @@ export default function Register() {
           </div>
 
           <button className='button' type='submit'>
-            {' '}
-            Cadastrar{' '}
+            Register
           </button>
         </form>
       </div>
