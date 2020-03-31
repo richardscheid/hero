@@ -10,7 +10,7 @@ import logoImg from '../../assets/logo.svg';
 import heroesImg from '../../assets/heroes.png';
 
 export default function Login() {
-  const [id, setId] = useState('');
+  const [name, setName] = useState('');
   const history = useHistory();
 
   async function handleLogin(e) {
@@ -18,9 +18,9 @@ export default function Login() {
 
     try {
 
-      const response = await api.post('sessions', { id });
-      localStorage.setItem('ongId', id);
-      localStorage.setItem('ongName', response.data.name);
+      const { data } = await api.post('sessions', { name });
+      localStorage.setItem('ongId', data.id);
+      localStorage.setItem('ongName', name);
       history.push('/profile');
     
     } catch (err) {
@@ -36,9 +36,9 @@ export default function Login() {
         <form onSubmit={handleLogin}>
           <h1>Sign In</h1>
           <input
-            placeholder='Your ID'
-            value={id}
-            onChange={e => setId(e.target.value)}
+            placeholder='Your organization'
+            value={name}
+            onChange={e => setName(e.target.value)}
           />
           <button className='button' type='submit'>
             Login
