@@ -31,18 +31,13 @@ export default function Register() {
     };
 
     try {
-      const response = await api.post('ongs', data);
 
-      alertify.alert(
-        `Yeah! Obrigado por se cadastar em nosso sistema! Aqui está o seu ID de acesso: ${response.data.id} 🦸‍♂️`,
-        function() {}
-      );
-
+      await api.post('ongs', data);
+      alertify.alert(`Awesome, thank you for joining us! 🦸‍♂️`, function() {});
       history.push('/');
+    
     } catch (err) {
-      alertify.error(
-        'Ih, acho que o Superman encostou em uma Kryptonita! Teve um erro no cadastro, tente novamente.'
-      );
+      alertify.error('There is something wrong with your registration , try again!');
     }
   }
 
@@ -91,6 +86,7 @@ export default function Register() {
               placeholder='ST'
               style={{ width: 80 }}
               value={uf}
+              maxlength='2'
               onChange={e => setUf(e.target.value)}
             />
           </div>

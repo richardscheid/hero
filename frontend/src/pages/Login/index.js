@@ -22,7 +22,7 @@ export default function Login() {
       localStorage.setItem('ongName', response.data.name);
       history.push('/profile');
     } catch (err) {
-      alertify.error('Something wrong with your Login, try it again!');
+      alertify.error('Something wrong with your Login, try again!');
     }
   }
 
