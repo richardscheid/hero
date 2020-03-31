@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
- Connecting NGO to those who want to help the world!
+ Connecting NGOs to those who want to help the world!
 </p>
 
 <br>
