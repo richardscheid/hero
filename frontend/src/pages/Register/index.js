@@ -31,9 +31,7 @@ export default function Register() {
       history.push('/');
 
     } catch (err) {
-      alertify.error(
-        'There is something wrong with your registration , try again!'
-      );
+      alertify.error('There is something wrong with your registration , try again!');
     }
   }
 
@@ -44,11 +42,11 @@ export default function Register() {
           <img src={logoImg} alt='Be The Hero' />
 
           <h1>Register</h1>
-          <p>Register and help people find the cases of your NGO. 🦸‍♂️</p>
+          <p>Register and help people find the cases of your NGO! 🦸‍♂️</p>
 
           <Link className='back-link' to='/'>
             <FiArrowLeft size={16} color='#E02041' />
-            Back to login
+            Back to Login
           </Link>
         </section>
         <form onSubmit={handleRegister}>
