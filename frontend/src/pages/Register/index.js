@@ -22,22 +22,18 @@ export default function Register() {
   async function handleRegister(e) {
     e.preventDefault();
 
-    const data = {
-      name,
-      email,
-      whatsapp,
-      city,
-      uf
-    };
+    const data = { name, email, whatsapp, city, uf };
 
     try {
-
+      
       await api.post('ongs', data);
       alertify.alert(`Awesome, thank you for joining us! 🦸‍♂️`, function() {});
       history.push('/');
-    
+
     } catch (err) {
-      alertify.error('There is something wrong with your registration , try again!');
+      alertify.error(
+        'There is something wrong with your registration , try again!'
+      );
     }
   }
 
