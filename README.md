@@ -1,7 +1,10 @@
-<h4 align="center">
-<img src="./image/logo@3x.png" width="250px" /><br>
- <b>Be the truth hero!</b>
-</h4>
+<p align="center">
+  <img src="./image/logo@3x.png" />
+</p>
+
+<p align="center">
+ Connecting NGO to those who want to help the world!
+</p>
 
 <br>
 
