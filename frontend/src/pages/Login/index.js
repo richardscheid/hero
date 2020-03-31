@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import alertify from 'alertifyjs';
 import { FiLogIn } from 'react-icons/fi';
 
 import './styles.css';
@@ -24,7 +23,7 @@ export default function Login() {
       history.push('/profile');
     
     } catch (err) {
-      alertify.error('Something wrong with your Login, try again!');
+      alert('Something wrong with your Login, try again!');
     }
   }
 

@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
-import alertify from 'alertifyjs';
 
 import api from '../../services/api';
 
 import './styles.css';
-import './alertify.min.css';
 
 import logoImg from '../../assets/logo.svg';
 
@@ -32,10 +30,8 @@ export default function Register() {
       localStorage.setItem('ongName', data.name);
       history.push('/profile');
       
-      alertify.alert(`Awesome, thank you for joining us! 🦸‍♂️`, function() {});
-
     } catch (err) {
-      alertify.error('There is something wrong with your registration , try again!');
+      alert('There is something wrong with your registration , try again!');
     }
   }
 
