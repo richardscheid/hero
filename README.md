@@ -1,5 +1,5 @@
 <h4 align="center">
-<img src="./image/logo3x.png" width="250px" /><br>
+<img src="./image/logo@3x.png" width="250px" /><br>
  <b>Be the truth hero!</b>
 </h4>
 
