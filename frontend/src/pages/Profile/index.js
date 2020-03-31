@@ -31,7 +31,7 @@ export default function Profile() {
 
       setIncidents(incidents.filter(incident => incident.id !== id));
     } catch (err) {
-      alert('Erro ao deletar caso, tente novamente');
+      alert('Something wrong when deleting a case, try again!');
     }
   }
 
@@ -49,7 +49,7 @@ export default function Profile() {
         </span>
 
         <Link className='button' to='incidents/new'>
-          Register a case
+          New Case
         </Link>
         <button onClick={handleLogout} type='button'>
           <FiPower size={18} color='#E02041' />
@@ -75,8 +75,7 @@ export default function Profile() {
 
             <button
               onClick={() => handleDeleteIncident(incident.id)}
-              type='button'
-            >
+              type='button'>
               <FiTrash2 size={20} color='#E02041' />
             </button>
           </li>
