@@ -22,13 +22,17 @@ export default function Register() {
   async function handleRegister(e) {
     e.preventDefault();
 
-    const data = { name, email, whatsapp, city, uf };
+    const details = { name, email, whatsapp, city, uf };
 
     try {
       
-      await api.post('ongs', data);
+      const { data } = await api.post('ongs', details);
+      
+      localStorage.setItem('ongId', data.id);
+      localStorage.setItem('ongName', data.name);
+      history.push('/profile');
+      
       alertify.alert(`Awesome, thank you for joining us! 🦸‍♂️`, function() {});
-      history.push('/');
 
     } catch (err) {
       alertify.error('There is something wrong with your registration , try again!');
