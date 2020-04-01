@@ -34,7 +34,7 @@ export default function NewIncident() {
 
       history.push('/profile');
     } catch (err) {
-      alert('Ocorreu um erro ao cadastrar o caso');
+      alert('Something wrong with this case, try again!');
     }
   }
 
@@ -46,7 +46,7 @@ export default function NewIncident() {
           
           <h1>Register new case</h1>
           
-          <p>Describe the case in detail to find a hero to solve this.</p>
+          <p>Describe the case in detail to find a hero to help.</p>
 
           <Link className='back-link' to='/profile'>
             <FiArrowLeft size={16} color='#E02041' />

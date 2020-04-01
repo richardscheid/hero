@@ -9,11 +9,11 @@ import './styles.css';
 import logoImg from '../../assets/logo.svg';
 
 export default function Register() {
+  const [uf, setUf] = useState('');
+  const [city, setCity] = useState('');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [whatsapp, setWhatsapp] = useState('');
-  const [city, setCity] = useState('');
-  const [uf, setUf] = useState('');
 
   const history = useHistory();
 
@@ -42,7 +42,7 @@ export default function Register() {
           <img src={logoImg} alt='Be The Hero' />
 
           <h1>Register</h1>
-          <p>Register and help people find the cases of your NGO! 🦸‍♂️</p>
+          <p>Register and help people find the cases of your NGO</p>
 
           <Link className='back-link' to='/'>
             <FiArrowLeft size={16} color='#E02041' />
@@ -58,7 +58,7 @@ export default function Register() {
 
           <input
             type='email'
-            placeholder='E-mail'
+            placeholder='Email'
             value={email}
             onChange={e => setEmail(e.target.value)}
           />
@@ -77,7 +77,7 @@ export default function Register() {
             />
 
             <input
-              placeholder='ST'
+              placeholder='PR'
               style={{ width: 80 }}
               value={uf}
               maxlength='2'
