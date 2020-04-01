@@ -6,7 +6,9 @@
  Connecting NGOs and people to change the world
 </p>
 
-<img src="./image/login.png" alt="project login"/>
+<img src="./image/login.png" alt="login"/>
+
+<img src="./image/cases.png" alt="cases" />
 
 <br>
 
