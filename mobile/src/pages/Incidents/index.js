@@ -62,7 +62,7 @@ export default function Incidents() {
       </View>
       <Text style={styles.mainTitle}>Welcome</Text>
       <Text style={styles.mainDescription}>
-        Choose one of the cases below and save the day!
+        Choose one of the cases and save the day!
       </Text>
 
       <FlatList
