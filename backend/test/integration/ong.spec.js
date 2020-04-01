@@ -17,7 +17,7 @@ describe('ONG', () => {
       .post('/ongs')
       .send({
         name: 'birds',
-        email: 'birds@gmail.com',
+        email: 'birds@mail.com',
         whatsapp: '47123456789',
         city: 'Toronto',
         uf: 'ON'
