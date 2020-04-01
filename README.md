@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
- Connecting NGOs to those who want to help the world!
+ Connecting NGOs and people to change the world
 </p>
 
 <img src="./image/login.png" alt="project login"/>
