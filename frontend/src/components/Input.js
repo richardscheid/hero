@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 
 export default class Input extends Component {
@@ -6,10 +5,7 @@ export default class Input extends Component {
     return (
       <>
         <label htmlFor={this.props.id}> {this.props.label} </label>
-        <input 
-          {...this.props}
-          required
-          autoComplete='off' />
+        <input {...this.props} required autoComplete='off' />
       </>
     );
   }
