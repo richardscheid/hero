@@ -61,15 +61,15 @@ export default function Profile() {
       <ul>
         {incidents.map(incident => (
           <li key={incident.id}>
-            <strong>Case:</strong>
+            <strong>Case</strong>
             <p>{incident.title}</p>
-            <strong>Description:</strong>
+            <strong>Description</strong>
             <p>{incident.description}</p>
-            <strong>Value:</strong>
+            <strong>Value</strong>
             <p>
-              {Intl.NumberFormat('pt-BR', {
+              {Intl.NumberFormat('en-US', {
                 style: 'currency',
-                currency: 'BRL'
+                currency: 'USD'
               }).format(incident.value)}
             </p>
 
