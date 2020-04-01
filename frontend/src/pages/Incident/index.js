@@ -6,6 +6,7 @@ import './styles.css';
 
 import api from '../../services/api';
 import Input from '../../components/Input';
+import Textarea from '../../components/Textarea';
 import logoImg from '../../assets/logo.svg';
 
 export default function NewIncident() {
@@ -62,7 +63,7 @@ export default function NewIncident() {
             onChange={e => setTitle(e.target.value)}
           />
           
-          <textarea
+          <Textarea
             placeholder='Description'
             value={description}
             onChange={e => setDescription(e.target.value)}
