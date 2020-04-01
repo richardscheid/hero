@@ -1,10 +1,12 @@
 <p align="center">
-  <img src="./image/logo@3x.png" />
+  <img src="./image/logo.png" />
 </p>
 
 <p align="center">
  Connecting NGOs to those who want to help the world!
 </p>
+
+<img src="./image/login.png" alt="project login"/>
 
 <br>
 
@@ -18,6 +20,9 @@
 - Express
 - Knex
 - SQLite
+- Jest
+- Supertest
+- Celebrate
 
 ## License
 
