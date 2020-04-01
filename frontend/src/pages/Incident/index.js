@@ -5,9 +5,11 @@ import { FiArrowLeft } from 'react-icons/fi';
 import './styles.css';
 
 import api from '../../services/api';
-import Input from '../../components/Input';
-import Textarea from '../../components/Textarea';
 import logoImg from '../../assets/logo.svg';
+
+import Input from '../../components/Input';
+import Button from '../../components/Button';
+import Textarea from '../../components/Textarea';
 
 export default function NewIncident() {
   const history = useHistory();
@@ -75,9 +77,7 @@ export default function NewIncident() {
             onChange={e => setValue(e.target.value)}
           />
 
-          <button className='button' type='submit'>
-            Register
-          </button>
+          <Button className='button' type='submit' label='Register' />
         </form>
       </div>
     </div>

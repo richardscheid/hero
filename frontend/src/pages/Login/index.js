@@ -9,6 +9,7 @@ import logoImg from '../../assets/logo.svg';
 import heroesImg from '../../assets/heroes.png';
 
 import Input from '../../components/Input';
+import Button from '../../components/Button';
 
 export default function Login() {
   const history = useHistory();
@@ -21,6 +22,7 @@ export default function Login() {
       const { data } = await api.post('sessions', { name });
       localStorage.setItem('ongId', data.id);
       localStorage.setItem('ongName', name);
+
       history.push('/profile');
     } catch (err) {
       alert('Something wrong with your Login, try again!');
@@ -42,9 +44,7 @@ export default function Login() {
             onChange={e => setName(e.target.value)}
           />
 
-          <button className='button' type='submit'>
-            Login
-          </button>
+          <Button className='button' type='submit' label='Login' />
 
           <Link className='back-link' to='/register'>
             <FiLogIn size={16} color='#e02041' />
