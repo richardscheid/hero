@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 
-import api from '../../services/api';
-
 import './styles.css';
 
+import api from '../../services/api';
+import Input from '../../components/Input';
 import logoImg from '../../assets/logo.svg';
 
 export default function Register() {
@@ -50,37 +50,37 @@ export default function Register() {
           </Link>
         </section>
         <form onSubmit={handleRegister}>
-          <input
+          <Input
             placeholder='NGO Name'
             value={name}
             onChange={e => setName(e.target.value)}
           />
 
-          <input
+          <Input
             type='email'
             placeholder='Email'
             value={email}
             onChange={e => setEmail(e.target.value)}
           />
 
-          <input
+          <Input
             placeholder='Phone number'
             value={whatsapp}
             onChange={e => setWhatsapp(e.target.value)}
           />
 
           <div className='input-group'>
-            <input
-              placeholder='City'
+            <Input
               value={city}
+              placeholder='City'
               onChange={e => setCity(e.target.value)}
             />
 
-            <input
-              placeholder='PR'
-              style={{ width: 80 }}
+            <Input
               value={uf}
+              placeholder='PR'
               maxlength='2'
+              style={{ width: 80 }}
               onChange={e => setUf(e.target.value)}
             />
           </div>
