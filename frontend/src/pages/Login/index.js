@@ -9,8 +9,8 @@ import logoImg from '../../assets/logo.svg';
 import heroesImg from '../../assets/heroes.png';
 
 export default function Login() {
-  const [name, setName] = useState('');
   const history = useHistory();
+  const [name, setName] = useState('');
 
   async function handleLogin(e) {
     e.preventDefault();
@@ -37,6 +37,7 @@ export default function Login() {
           <input
             placeholder='Your organization'
             value={name}
+            required
             onChange={e => setName(e.target.value)}
           />
           <button className='button' type='submit'>
