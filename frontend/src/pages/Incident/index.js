@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 
-import api from '../../services/api';
-
 import './styles.css';
+
+import api from '../../services/api';
+import Input from '../../components/Input';
 import logoImg from '../../assets/logo.svg';
 
 export default function NewIncident() {
@@ -54,24 +55,26 @@ export default function NewIncident() {
           </Link>
         </section>
 
-        <form>
-          <input
+        <form onSubmit={handleNewIncident}>
+          <Input
             placeholder='Title of the case'
             value={title}
             onChange={e => setTitle(e.target.value)}
           />
+          
           <textarea
             placeholder='Description'
             value={description}
             onChange={e => setDescription(e.target.value)}
           />
-          <input
+
+          <Input
             placeholder='Value'
             value={value}
             onChange={e => setValue(e.target.value)}
           />
 
-          <button onClick={handleNewIncident} className='button' type='submit'>
+          <button className='button' type='submit'>
             Register
           </button>
         </form>
